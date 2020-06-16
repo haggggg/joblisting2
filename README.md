@@ -15,7 +15,7 @@ https://github.com/iTexZoz/RageUI <br>
 https://github.com/iTexZoz/RageUI/wiki
 
 # Video
-[![IMAGE ALT TEXT HERE](https://i.imgur.com/yIEP25E.png)](https://streamable.com/maawk6)
+[![Video](https://i.imgur.com/yIEP25E.png)](https://streamable.com/maawk6)
 # Support 
 
 In my discord:

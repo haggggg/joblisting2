@@ -1,4 +1,4 @@
-# joblisting2
+# Job Listing
  Job listing in RageUI
 It's a simple job listing in RageUI
 

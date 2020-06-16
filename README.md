@@ -5,7 +5,7 @@ It's a simple job listing in RageUI
 You can configure the jobs in the cl.lua
 Config.jobs L20
 
-The menu is in English, it is possible that there are some mistakes (I am French)
+The menu is in English, it's possible that there are some mistakes (I am French)
 
 # Credits
 

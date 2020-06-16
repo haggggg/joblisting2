@@ -9,7 +9,7 @@ The menu is in English, it is possible that there are some mistakes (I am French
 
 # Credits
 
-RageUI by iTexZoz:
+RageUI by iTexZoz: <br>
 https://github.com/iTexZoz/RageUI
 RageUI Wiki:
 https://github.com/iTexZoz/RageUI/wiki

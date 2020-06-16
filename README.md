@@ -15,8 +15,7 @@ RageUI Wiki:
 https://github.com/iTexZoz/RageUI/wiki
 
 # Video
-
-[!(https://streamable.com/maawk6)](https://streamable.com/maawk6)
+![](https://streamable.com/maawk6)
 # Support 
 
 In my discord:

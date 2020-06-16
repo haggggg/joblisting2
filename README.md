@@ -9,13 +9,13 @@ The menu is in English, it is possible that there are some mistakes (I am French
 
 # Credits
 
-RageUI by iTexZoz: <br>
-https://github.com/iTexZoz/RageUI
-RageUI Wiki:
+<strong>RageUI by iTexZoz:</strong> <br> 
+https://github.com/iTexZoz/RageUI <br>
+<strong>RageUI Wiki:</strong> <br>
 https://github.com/iTexZoz/RageUI/wiki
 
 # Video
-![](https://streamable.com/maawk6)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
 # Support 
 
 In my discord:

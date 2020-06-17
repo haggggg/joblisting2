@@ -10,7 +10,7 @@ end)
 
 ---Menu---
 
-RMenu.Add('joblisting', 'main', RageUI.CreateMenu("Job Center", "Job center Menu"))
+RMenu.Add('joblisting', 'main', RageUI.CreateMenu("Job Center", "Choose a job"))
 
 
 Citizen.CreateThread(function()

@@ -2,8 +2,8 @@
  Job listing in RageUI
 It's a simple job listing in RageUI
 
-You can configure the jobs in the cl.lua
-Config.jobs L20
+You can configure the jobs in the config.lua
+Config.jobs 
 
 The menu is in English, it's possible that there are some mistakes (I am French)
 

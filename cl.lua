@@ -11,41 +11,31 @@ end)
 ---Menu---
 
 RMenu.Add('joblisting', 'main', RageUI.CreateMenu("Job Center", "Job center Menu"))
-RMenu.Add('joblisting', 'joblist',RageUI.CreateSubMenu(RMenu:Get('joblisting', 'main'), "Job list", "Choose a Job"))
-RMenu.Add('joblisting', 'resign', RageUI.CreateSubMenu(RMenu:Get('joblisting', 'main'), "Resign", "To resign"))
 
 
 Citizen.CreateThread(function()
     while true do
+        
         RageUI.IsVisible(RMenu:Get('joblisting', 'main'), true, true, true, function()
 
-            RageUI.ButtonWithStyle("Job list", "Access to job list", {RightLabel = "→→→"}, true, function()
-            end, RMenu:Get('joblisting', 'joblist'))
-            RageUI.ButtonWithStyle("Resign", "To resign", {RightLabel = "→→→"}, true, function()
-            end, RMenu:Get('joblisting', 'resign'))
-        end, function()
-        end)
-
-        RageUI.IsVisible(RMenu:Get('joblisting', 'joblist'), true, true, true, function()
+            RageUI.ButtonWithStyle("Resign here", "", {RightLabel = "→"}, true, function(Hovered, Active, Selected)
+                if Selected then
+                   
+                    TriggerServerEvent('joblisting:unsetjob')
+                end
+            end)
             for k,v in pairs(Config.jobs) do  
-                RageUI.ButtonWithStyle(v.Label, v.Description,{RightLabel = v.Emoji}, true, function(Hovered, Active, Selected)
-                    if (Selected) then
+                RageUI.ButtonWithStyle(v.Label, v.Description, {RightLabel = v.Emoji}, true, function(Hovered, Active, Selected)
+                    if Selected then
+                        
                         local job = v.Value
                         TriggerServerEvent('joblisting:setjob', job)
                     end
                 end)
-                end
-            end, function()
-            end)
-            RageUI.IsVisible(RMenu:Get('joblisting', 'resign'), true, true, true, function()
-                RageUI.ButtonWithStyle("Resign here", "", {RightLabel = "→"}, true, function(Hovered, Active, Selected)
-                    if (Selected) then
-                        TriggerServerEvent('joblisting:unsetjob')
-                    end
-                end)
-                        
-            end, function()
 
+                
+                end
+            end, function()                  
             end, 1)
     
             Citizen.Wait(0)
@@ -72,6 +62,7 @@ Citizen.CreateThread(function()
                     time_display = 1
                 })
                 if IsControlJustPressed(1,51) then
+                    
                     RageUI.Visible(RMenu:Get('joblisting', 'main'), not RageUI.Visible(RMenu:Get('joblisting', 'main')))
                 end
             end

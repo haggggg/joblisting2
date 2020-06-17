@@ -14,22 +14,6 @@ RMenu.Add('joblisting', 'main', RageUI.CreateMenu("Job Center", "Job center Menu
 RMenu.Add('joblisting', 'joblist',RageUI.CreateSubMenu(RMenu:Get('joblisting', 'main'), "Job list", "Choose a Job"))
 RMenu.Add('joblisting', 'resign', RageUI.CreateSubMenu(RMenu:Get('joblisting', 'main'), "Resign", "To resign"))
 
-------------------------------CONFIG JOB---------------------------------------------------------------------------
-
-Config = {}
-Config.jobs = {
-    {Description = "Become Miner" , Label = "Miner" , Value = "miner" , Emoji = "⛏️" },
-    {Description = "Become Tailor" , Label = "Tailor" , Value = "tailor" , Emoji = "👔"},
-    {Description = "Become Lumberjack" , Label = "Lumberjack" , Value = "lumberjack" , Emoji = "🪓"},  
-    {Description = "Become Garbage collector" , Label = "Garbage collector" , Value = "garbage" , Emoji = "🗑️"},
-    {Description = "Become Slaughterer" , Label = "Slaughterer" , Value = "slaughterer" , Emoji = "🔪"},
-    {Description = "Become Fisherman" , Label = "Fisherman" , Value = "fisherman" , Emoji = "🎣"}    
-
-    
-
-}
-
----------------------------------------------------------------------------------------------------------------------
 
 Citizen.CreateThread(function()
     while true do
@@ -71,22 +55,17 @@ Citizen.CreateThread(function()
     
 ---Menu position---    
 
-local position = {
-    {x = -269.32 , y = -956.15, z = 31.22, }
-}    
-
-
-
+ 
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
 
-        for k in pairs(position) do
+        for k, v in pairs(Config.pos) do
 
             local plyCoords = GetEntityCoords(GetPlayerPed(-1), false)
-            local dist = Vdist(plyCoords.x, plyCoords.y, plyCoords.z, position[k].x, position[k].y, position[k].z)
+            local dist = Vdist(plyCoords.x, plyCoords.y, plyCoords.z, v.X, v.Y, v.Z)
 
-            if dist <= 1.0 then
+            if dist <= 1.5 then
 
                RageUI.Text({
                     message = "Press[~b~E~w~] to access ~b~Job Center",
@@ -103,14 +82,16 @@ end)
 ---PED---
 
 Citizen.CreateThread(function()
+    for k, v in pairs(Config.pos) do
     local hash = GetHashKey("cs_bankman")
     while not HasModelLoaded(hash) do
     RequestModel(hash)
     Wait(20)
     end
-    ped = CreatePed("PED_TYPE_CIVFEMALE", "cs_bankman", -269.32,  -956.15,30.22, 226.96, false, true)
+    ped = CreatePed("PED_TYPE_CIVFEMALE", "cs_bankman", v.X,  v.Y, v.Z, 226.96, false, true)
     SetBlockingOfNonTemporaryEvents(ped, true)
     FreezeEntityPosition(ped, true)
+    end
 end)
 
 ---BLIPS---

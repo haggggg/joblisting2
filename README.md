@@ -1,6 +1,6 @@
 # Job Listing
- Job listing in RageUI
-It's a simple job listing in RageUI
+ Job listing RageUI
+It's a simple job listing with RageUI
 
 You can configure the jobs in the config.lua
 Config.jobs 
